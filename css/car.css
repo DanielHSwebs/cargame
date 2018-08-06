@@ -1,0 +1,123 @@
+body{
+	font-family: 'helvetica', 'arial', sans-serif;
+
+}
+
+
+a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 10px;
+	border-style: solid;
+	text-transform: uppercase;
+	transition: color 300ms;
+}
+
+a:hover{
+	background-color: green;
+}
+
+.left{
+	background-color:#99ffcc;
+	position: fixed;
+	width: 25%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px;
+}
+
+
+.right{
+	background-color: #d2a679;
+	position: fixed;
+	width: 75%;
+	height: 100%;
+	top: 0;
+	right: 0;
+}
+
+.car1{
+	position: absolute;
+	left: 5%;
+	top: 100px;
+	width: 100px;
+	height: 50px;
+	background-image: url('../img/auto1.png');
+	transition: left 10000ms;
+}
+
+.car2{
+	position: absolute;
+	left: 5%;
+	top: 200px;
+	width: 100px;
+	height: 50px;
+	background-image: url('../img/auto2.png');
+	transition: left 10000ms;
+}
+
+.car3{
+	position: absolute;
+	left: 5%;
+	bottom: 200px;
+	width: 100px;
+	height: 50px;
+	background-image: url('../img/auto3.png');
+	transition: left 10000ms;
+}
+
+.car4{
+	position: absolute;
+	left: 5%;
+	bottom: 100px;
+	width: 100px;
+	height: 50px;
+	background-image: url('../img/auto4.png');
+	transition: left 10000ms;
+}
+
+.car1.win,
+.car2.win,
+.car3.win,
+.car4.win{
+	transition: 8000ms;
+}
+
+.finishLine{
+	position: absolute;
+	background-color: black;
+	right: 10%;
+	width: 50px;
+	height: 100%;
+	bottom: 0px;
+}
+
+body.body-state6 .car1,
+body.body-state6 .car2,
+body.body-state6 .car3,
+body.body-state6 .car4{left: 700px;	}
+body.body-state7 .car1,
+body.body-state7 .car2,
+body.body-state7 .car3,
+body.body-state7 .car4{left: 700px;	}
+
+.state1, .state2, .state3, .state4, .state5, .state6, .state7, .state8, .state9{display: none;}
+
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
+body.body-state6 .state6{display: block;}
+body.body-state7 .state7{display: block;}
+body.body-state8 .state8{display: block;}
+body.body-state9 .state9{display: block;}
