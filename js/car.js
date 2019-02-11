@@ -1,3 +1,6 @@
+var timer = null;
+var countdownNumber = 10;
+
 var carNumber= function(carNumber) {
 
 			console.log('specialNumber:',carNumber)
@@ -16,14 +19,29 @@ function myFunction() {
 
 var changeState= function (state) {
 	document.body.className = 'body-state'+state;
+clearInterval(timer);
+	countdownNumber = 10;
+	document.getElementById('countdown').innerHTML = countdownNumber;
+	
+	if (state == 3){
+		timer = setInterval(function () {
+			countdownNumber = countdownNumber -1;
+			document.getElementById('countdown').innerHTML = countdownNumber;
+	if (countdownNumber =7) {
+				changeState(4);
+			}
+			if(countdownNumber =4) {
+			changeState(5)
 
 
-	if (state == 3){ 
-		changeState(4);
-	} else if (state == 4){
-		changeState(5)
-	} else if (state == 5){
-		changeState(6)
+			if (countdownNumber <=0) {
+				changeState(6);
+			};
+		}, 1000);
+	} else if (state == 3) {
+	
+
+
 
 	var randomNumber = Math.floor(Math.random() *4) + 1;
 
